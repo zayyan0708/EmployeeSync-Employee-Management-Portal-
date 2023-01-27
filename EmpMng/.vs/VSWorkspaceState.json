@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\EmpMng",
+    "\\EmpMng\\EmpMng",
+    "\\EmpMng\\EmpMng\\Controllers",
+    "\\EmpMng\\EmpMng\\Views",
+    "\\EmpMng\\EmpMng\\Views\\Account",
+    "\\EmpMng\\EmpMng\\Views\\Employee"
+  ],
+  "SelectedNode": "\\EmpMng\\EmpMng\\Controllers\\EmployeeController.cs",
+  "PreviewInSolutionExplorer": false
+}

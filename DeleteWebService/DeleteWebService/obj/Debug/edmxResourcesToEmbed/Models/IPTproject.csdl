@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IPTprojectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Designation">
+    <Key>
+      <PropertyRef Name="did" />
+    </Key>
+    <Property Name="did" Type="Int32" Nullable="false" />
+    <Property Name="DeptName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="mid" Type="Int32" />
+    <NavigationProperty Name="Employees" Relationship="Self.FK_Employees_Designations" FromRole="Designations" ToRole="Employees" />
+    <NavigationProperty Name="Employee" Relationship="Self.FK_Table_3_Employees" FromRole="Designations" ToRole="Employees" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="eid" />
+    </Key>
+    <Property Name="eid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="pass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="did" Type="Int32" />
+    <Property Name="managerid" Type="Int32" />
+    <Property Name="salary" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="Designation" Relationship="Self.FK_Employees_Designations" FromRole="Employees" ToRole="Designations" />
+    <NavigationProperty Name="Designations" Relationship="Self.FK_Table_3_Employees" FromRole="Employees" ToRole="Designations" />
+    <NavigationProperty Name="Employees1" Relationship="Self.FK_Employees_Employees" FromRole="Employees" ToRole="Employees1" />
+    <NavigationProperty Name="Employee1" Relationship="Self.FK_Employees_Employees" FromRole="Employees1" ToRole="Employees" />
+    <NavigationProperty Name="Employees11" Relationship="Self.FK_Employees_Employees1" FromRole="Employees" ToRole="Employees1" />
+    <NavigationProperty Name="Employee2" Relationship="Self.FK_Employees_Employees1" FromRole="Employees1" ToRole="Employees" />
+  </EntityType>
+  <Association Name="FK_Employees_Designations">
+    <End Role="Designations" Type="Self.Designation" Multiplicity="0..1" />
+    <End Role="Employees" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Designations">
+        <PropertyRef Name="did" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="did" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_3_Employees">
+    <End Role="Employees" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Designations" Type="Self.Designation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="eid" />
+      </Principal>
+      <Dependent Role="Designations">
+        <PropertyRef Name="mid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employees_Employees">
+    <End Role="Employees" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Employees1" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="eid" />
+      </Principal>
+      <Dependent Role="Employees1">
+        <PropertyRef Name="managerid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employees_Employees1">
+    <End Role="Employees" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Employees1" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="eid" />
+      </Principal>
+      <Dependent Role="Employees1">
+        <PropertyRef Name="managerid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="IPTprojectEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Designations" EntityType="Self.Designation" />
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <AssociationSet Name="FK_Employees_Designations" Association="Self.FK_Employees_Designations">
+      <End Role="Designations" EntitySet="Designations" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_3_Employees" Association="Self.FK_Table_3_Employees">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Designations" EntitySet="Designations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employees_Employees" Association="Self.FK_Employees_Employees">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Employees1" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employees_Employees1" Association="Self.FK_Employees_Employees1">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Employees1" EntitySet="Employees" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

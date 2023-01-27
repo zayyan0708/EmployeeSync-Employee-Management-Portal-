@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IPTprojectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="attendance">
+    <Key>
+      <PropertyRef Name="atid" />
+    </Key>
+    <Property Name="eid" Type="Int32" Nullable="false" />
+    <Property Name="dateT" Type="DateTime" Precision="0" />
+    <Property Name="atid" Type="Int32" Nullable="false" />
+    <Property Name="attendance1" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Employee" Relationship="Self.FK_attendance_Employees1" FromRole="attendance" ToRole="Employees" />
+  </EntityType>
+  <EntityType Name="Designation">
+    <Key>
+      <PropertyRef Name="did" />
+    </Key>
+    <Property Name="did" Type="Int32" Nullable="false" />
+    <Property Name="DeptName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="mid" Type="Int32" />
+    <NavigationProperty Name="Employees" Relationship="Self.Des_Emp" FromRole="Designations" ToRole="Employees" />
+    <NavigationProperty Name="Employee" Relationship="Self.Des_Mng" FromRole="Designations" ToRole="Employees" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="eid" />
+    </Key>
+    <Property Name="eid" Type="Int32" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="pass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="did" Type="Int32" />
+    <Property Name="managerid" Type="Int32" />
+    <Property Name="salary" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="attendances" Relationship="Self.FK_attendance_Employees1" FromRole="Employees" ToRole="attendance" />
+    <NavigationProperty Name="Designation" Relationship="Self.Des_Emp" FromRole="Employees" ToRole="Designations" />
+    <NavigationProperty Name="Designations" Relationship="Self.Des_Mng" FromRole="Employees" ToRole="Designations" />
+    <NavigationProperty Name="Employees1" Relationship="Self.Emp_Mng" FromRole="Employees" ToRole="Employees1" />
+    <NavigationProperty Name="Employee1" Relationship="Self.Emp_Mng" FromRole="Employees1" ToRole="Employees" />
+  </EntityType>
+  <Association Name="FK_attendance_Employees1">
+    <End Role="Employees" Type="Self.Employee" Multiplicity="1" />
+    <End Role="attendance" Type="Self.attendance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="eid" />
+      </Principal>
+      <Dependent Role="attendance">
+        <PropertyRef Name="eid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Des_Emp">
+    <End Role="Designations" Type="Self.Designation" Multiplicity="0..1" />
+    <End Role="Employees" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Designations">
+        <PropertyRef Name="did" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="did" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Des_Mng">
+    <End Role="Employees" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Designations" Type="Self.Designation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="eid" />
+      </Principal>
+      <Dependent Role="Designations">
+        <PropertyRef Name="mid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Emp_Mng">
+    <End Role="Employees" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Employees1" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="eid" />
+      </Principal>
+      <Dependent Role="Employees1">
+        <PropertyRef Name="managerid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="IPTproject" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="attendances" EntityType="Self.attendance" />
+    <EntitySet Name="Designations" EntityType="Self.Designation" />
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <AssociationSet Name="FK_attendance_Employees1" Association="Self.FK_attendance_Employees1">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="attendance" EntitySet="attendances" />
+    </AssociationSet>
+    <AssociationSet Name="Des_Emp" Association="Self.Des_Emp">
+      <End Role="Designations" EntitySet="Designations" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="Des_Mng" Association="Self.Des_Mng">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Designations" EntitySet="Designations" />
+    </AssociationSet>
+    <AssociationSet Name="Emp_Mng" Association="Self.Emp_Mng">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Employees1" EntitySet="Employees" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

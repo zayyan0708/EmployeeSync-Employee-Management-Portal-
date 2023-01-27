@@ -1,0 +1,23 @@
+E:\IPT Project\WCFIPT\WCFIPT\bin\Debug\WCFIPT.dll.config
+E:\IPT Project\WCFIPT\WCFIPT\bin\Debug\WCFIPT.dll
+E:\IPT Project\WCFIPT\WCFIPT\bin\Debug\WCFIPT.pdb
+E:\IPT Project\WCFIPT\WCFIPT\obj\Debug\WCFIPT.csproj.AssemblyReference.cache
+E:\IPT Project\WCFIPT\WCFIPT\obj\Debug\WCFIPT.csproj.CoreCompileInputs.cache
+E:\IPT Project\WCFIPT\WCFIPT\obj\Debug\WCFIPT.dll
+E:\IPT Project\WCFIPT\WCFIPT\obj\Debug\WCFIPT.pdb
+E:\IPT Project\WCFIPT\WCFIPT\bin\Debug\EntityFramework.dll
+E:\IPT Project\WCFIPT\WCFIPT\bin\Debug\EntityFramework.SqlServer.dll
+E:\IPT Project\WCFIPT\WCFIPT\bin\Debug\EntityFramework.xml
+E:\IPT Project\WCFIPT\WCFIPT\bin\Debug\EntityFramework.SqlServer.xml
+E:\IPT Project\WCFIPT\WCFIPT\obj\Debug\WCFIPT.csproj.CopyComplete
+D:\project\WCFIPT\WCFIPT\bin\Debug\WCFIPT.dll.config
+D:\project\WCFIPT\WCFIPT\bin\Debug\WCFIPT.dll
+D:\project\WCFIPT\WCFIPT\bin\Debug\WCFIPT.pdb
+D:\project\WCFIPT\WCFIPT\bin\Debug\EntityFramework.dll
+D:\project\WCFIPT\WCFIPT\bin\Debug\EntityFramework.SqlServer.dll
+D:\project\WCFIPT\WCFIPT\bin\Debug\EntityFramework.xml
+D:\project\WCFIPT\WCFIPT\bin\Debug\EntityFramework.SqlServer.xml
+D:\project\WCFIPT\WCFIPT\obj\Debug\WCFIPT.csproj.AssemblyReference.cache
+D:\project\WCFIPT\WCFIPT\obj\Debug\WCFIPT.csproj.CoreCompileInputs.cache
+D:\project\WCFIPT\WCFIPT\obj\Debug\WCFIPT.dll
+D:\project\WCFIPT\WCFIPT\obj\Debug\WCFIPT.pdb

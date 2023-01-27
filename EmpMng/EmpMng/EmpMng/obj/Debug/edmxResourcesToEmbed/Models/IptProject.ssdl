@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IPTprojectModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Designations">
+    <Key>
+      <PropertyRef Name="did" />
+    </Key>
+    <Property Name="did" Type="int" Nullable="false" />
+    <Property Name="DeptName" Type="nvarchar" MaxLength="50" />
+    <Property Name="mid" Type="int" />
+  </EntityType>
+  <EntityType Name="Employees">
+    <Key>
+      <PropertyRef Name="eid" />
+    </Key>
+    <Property Name="eid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" />
+    <Property Name="pass" Type="nvarchar" MaxLength="50" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="did" Type="int" />
+    <Property Name="managerid" Type="int" />
+    <Property Name="salary" Type="numeric" Precision="18" Scale="0" />
+  </EntityType>
+  <Association Name="FK_Employees_Designations">
+    <End Role="Designations" Type="Self.Designations" Multiplicity="0..1" />
+    <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Designations">
+        <PropertyRef Name="did" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="did" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employees_Employees">
+    <End Role="Employees" Type="Self.Employees" Multiplicity="0..1" />
+    <End Role="Employees1" Type="Self.Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="eid" />
+      </Principal>
+      <Dependent Role="Employees1">
+        <PropertyRef Name="managerid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employees_Employees1">
+    <End Role="Employees" Type="Self.Employees" Multiplicity="0..1" />
+    <End Role="Employees1" Type="Self.Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="eid" />
+      </Principal>
+      <Dependent Role="Employees1">
+        <PropertyRef Name="managerid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_3_Employees">
+    <End Role="Employees" Type="Self.Employees" Multiplicity="0..1" />
+    <End Role="Designations" Type="Self.Designations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="eid" />
+      </Principal>
+      <Dependent Role="Designations">
+        <PropertyRef Name="mid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="IPTprojectModelStoreContainer">
+    <EntitySet Name="Designations" EntityType="Self.Designations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Employees_Designations" Association="Self.FK_Employees_Designations">
+      <End Role="Designations" EntitySet="Designations" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employees_Employees" Association="Self.FK_Employees_Employees">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Employees1" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employees_Employees1" Association="Self.FK_Employees_Employees1">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Employees1" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_3_Employees" Association="Self.FK_Table_3_Employees">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Designations" EntitySet="Designations" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

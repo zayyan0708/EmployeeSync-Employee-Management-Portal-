@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="IPTprojectModelStoreContainer" CdmEntityContainer="IPTprojectEntities">
+    <EntitySetMapping Name="Designations">
+      <EntityTypeMapping TypeName="IPTprojectModel.Designation">
+        <MappingFragment StoreEntitySet="Designations">
+          <ScalarProperty Name="did" ColumnName="did" />
+          <ScalarProperty Name="DeptName" ColumnName="DeptName" />
+          <ScalarProperty Name="mid" ColumnName="mid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="IPTprojectModel.Employee">
+        <MappingFragment StoreEntitySet="Employees">
+          <ScalarProperty Name="eid" ColumnName="eid" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="pass" ColumnName="pass" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="did" ColumnName="did" />
+          <ScalarProperty Name="managerid" ColumnName="managerid" />
+          <ScalarProperty Name="salary" ColumnName="salary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

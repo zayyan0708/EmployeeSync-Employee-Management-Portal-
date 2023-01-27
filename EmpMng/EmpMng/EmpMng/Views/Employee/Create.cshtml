@@ -1,0 +1,51 @@
+﻿@model EmpMng.Models.Employee
+@{
+    ViewBag.Title = "Create";
+}
+<h2>ADD EMPLOYEE</h2>
+<div class="form-horizontal">
+    <form action="Create" method="post">
+        <h4>Employee</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input type="text" class="user" name="name" value="name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'name';}">
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.email, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input type="text" class="user" name="email" value="email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'email';}">
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.pass, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input type="text" class="user" name="pass" value="pass" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'pass';}">
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.salary, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input type="text" class="user" name="salary" value="salary" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'salary';}">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<div>
+    @Html.ActionLink("Back to List", "MngView")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

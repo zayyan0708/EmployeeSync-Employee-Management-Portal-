@@ -1,0 +1,60 @@
+C:\Users\ahmed\source\repos\AdminLogin\AdminLogin\bin\Debug\AdminLogin.exe.config
+C:\Users\ahmed\source\repos\AdminLogin\AdminLogin\bin\Debug\AdminLogin.exe
+C:\Users\ahmed\source\repos\AdminLogin\AdminLogin\bin\Debug\AdminLogin.pdb
+C:\Users\ahmed\source\repos\AdminLogin\AdminLogin\bin\Debug\EntityFramework.dll
+C:\Users\ahmed\source\repos\AdminLogin\AdminLogin\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ahmed\source\repos\AdminLogin\AdminLogin\bin\Debug\EntityFramework.xml
+C:\Users\ahmed\source\repos\AdminLogin\AdminLogin\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ahmed\source\repos\AdminLogin\AdminLogin\obj\Debug\AdminLogin.csproj.AssemblyReference.cache
+C:\Users\ahmed\source\repos\AdminLogin\AdminLogin\obj\Debug\AdminLogin.AdminPanel.resources
+C:\Users\ahmed\source\repos\AdminLogin\AdminLogin\obj\Debug\AdminLogin.Properties.Resources.resources
+C:\Users\ahmed\source\repos\AdminLogin\AdminLogin\obj\Debug\AdminLogin.csproj.GenerateResource.cache
+C:\Users\ahmed\source\repos\AdminLogin\AdminLogin\obj\Debug\AdminLogin.csproj.CoreCompileInputs.cache
+C:\Users\ahmed\source\repos\AdminLogin\AdminLogin\obj\Debug\AdminLogin.exe
+C:\Users\ahmed\source\repos\AdminLogin\AdminLogin\obj\Debug\AdminLogin.pdb
+E:\IPT Project\AdminLogin\AdminLogin\bin\Debug\AdminLogin.exe.config
+E:\IPT Project\AdminLogin\AdminLogin\bin\Debug\AdminLogin.exe
+E:\IPT Project\AdminLogin\AdminLogin\bin\Debug\AdminLogin.pdb
+E:\IPT Project\AdminLogin\AdminLogin\bin\Debug\EntityFramework.dll
+E:\IPT Project\AdminLogin\AdminLogin\bin\Debug\EntityFramework.SqlServer.dll
+E:\IPT Project\AdminLogin\AdminLogin\bin\Debug\EntityFramework.xml
+E:\IPT Project\AdminLogin\AdminLogin\bin\Debug\EntityFramework.SqlServer.xml
+E:\IPT Project\AdminLogin\AdminLogin\obj\Debug\AdminLogin.csproj.AssemblyReference.cache
+E:\IPT Project\AdminLogin\AdminLogin\obj\Debug\AdminLogin.AdminPanel.resources
+E:\IPT Project\AdminLogin\AdminLogin\obj\Debug\AdminLogin.Properties.Resources.resources
+E:\IPT Project\AdminLogin\AdminLogin\obj\Debug\AdminLogin.csproj.GenerateResource.cache
+E:\IPT Project\AdminLogin\AdminLogin\obj\Debug\AdminLogin.csproj.CoreCompileInputs.cache
+E:\IPT Project\AdminLogin\AdminLogin\obj\Debug\AdminLogin.csproj.CopyComplete
+E:\IPT Project\AdminLogin\AdminLogin\obj\Debug\AdminLogin.exe
+E:\IPT Project\AdminLogin\AdminLogin\obj\Debug\AdminLogin.pdb
+E:\IPT Project\AdminLogin\AdminLogin\obj\Debug\AdminLogin.LoginForm.resources
+C:\Users\ahmed\Desktop\AdminLogin\AdminLogin\bin\Debug\AdminLogin.exe.config
+C:\Users\ahmed\Desktop\AdminLogin\AdminLogin\bin\Debug\AdminLogin.exe
+C:\Users\ahmed\Desktop\AdminLogin\AdminLogin\bin\Debug\AdminLogin.pdb
+C:\Users\ahmed\Desktop\AdminLogin\AdminLogin\bin\Debug\EntityFramework.dll
+C:\Users\ahmed\Desktop\AdminLogin\AdminLogin\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ahmed\Desktop\AdminLogin\AdminLogin\bin\Debug\EntityFramework.xml
+C:\Users\ahmed\Desktop\AdminLogin\AdminLogin\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ahmed\Desktop\AdminLogin\AdminLogin\obj\Debug\AdminLogin.csproj.AssemblyReference.cache
+C:\Users\ahmed\Desktop\AdminLogin\AdminLogin\obj\Debug\AdminLogin.AdminPanel.resources
+C:\Users\ahmed\Desktop\AdminLogin\AdminLogin\obj\Debug\AdminLogin.LoginForm.resources
+C:\Users\ahmed\Desktop\AdminLogin\AdminLogin\obj\Debug\AdminLogin.Properties.Resources.resources
+C:\Users\ahmed\Desktop\AdminLogin\AdminLogin\obj\Debug\AdminLogin.csproj.GenerateResource.cache
+C:\Users\ahmed\Desktop\AdminLogin\AdminLogin\obj\Debug\AdminLogin.csproj.CoreCompileInputs.cache
+C:\Users\ahmed\Desktop\AdminLogin\AdminLogin\obj\Debug\AdminLogin.exe
+C:\Users\ahmed\Desktop\AdminLogin\AdminLogin\obj\Debug\AdminLogin.pdb
+D:\project\AdminLogin\AdminLogin\bin\Debug\AdminLogin.exe.config
+D:\project\AdminLogin\AdminLogin\bin\Debug\AdminLogin.exe
+D:\project\AdminLogin\AdminLogin\bin\Debug\AdminLogin.pdb
+D:\project\AdminLogin\AdminLogin\bin\Debug\EntityFramework.dll
+D:\project\AdminLogin\AdminLogin\bin\Debug\EntityFramework.SqlServer.dll
+D:\project\AdminLogin\AdminLogin\bin\Debug\EntityFramework.xml
+D:\project\AdminLogin\AdminLogin\bin\Debug\EntityFramework.SqlServer.xml
+D:\project\AdminLogin\AdminLogin\obj\Debug\AdminLogin.csproj.AssemblyReference.cache
+D:\project\AdminLogin\AdminLogin\obj\Debug\AdminLogin.AdminPanel.resources
+D:\project\AdminLogin\AdminLogin\obj\Debug\AdminLogin.LoginForm.resources
+D:\project\AdminLogin\AdminLogin\obj\Debug\AdminLogin.Properties.Resources.resources
+D:\project\AdminLogin\AdminLogin\obj\Debug\AdminLogin.csproj.GenerateResource.cache
+D:\project\AdminLogin\AdminLogin\obj\Debug\AdminLogin.csproj.CoreCompileInputs.cache
+D:\project\AdminLogin\AdminLogin\obj\Debug\AdminLogin.exe
+D:\project\AdminLogin\AdminLogin\obj\Debug\AdminLogin.pdb
